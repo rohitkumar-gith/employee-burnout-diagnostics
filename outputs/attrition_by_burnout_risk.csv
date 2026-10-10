@@ -1,0 +1,4 @@
+BurnoutRisk,Employees,Left,AttritionRate_pct,CI95_low_pct,CI95_high_pct
+Low,756,69,9.13,7.28,11.39
+Medium,588,126,21.43,18.3,24.93
+High,126,42,33.33,25.7,41.95

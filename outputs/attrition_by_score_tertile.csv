@@ -1,0 +1,4 @@
+ScoreGroup,Employees,Left,AttritionRate_pct,CI95_low_pct,CI95_high_pct,MeanScore,ScoreMin,ScoreMax
+Lowest third,513,38,7.41,5.44,10.0,19.90448343079922,0.0,26.43
+Middle third,471,55,11.68,9.08,14.89,34.820679405520174,27.14,44.29
+Highest third,486,144,29.63,25.74,33.84,58.950246913580244,45.0,97.86

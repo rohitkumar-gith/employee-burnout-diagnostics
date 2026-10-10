@@ -1,0 +1,764 @@
+{
+  "dataset": {
+    "file": "Palo Alto Networks.csv",
+    "rows": 1470,
+    "columns": 31,
+    "missing_cells": 0,
+    "duplicate_rows": 0,
+    "missing_required_columns": [],
+    "attrition_unique_values": [
+      "0",
+      "1"
+    ],
+    "value_issues": [],
+    "ranges": {
+      "JobInvolvement": [
+        1.0,
+        4.0
+      ],
+      "JobSatisfaction": [
+        1.0,
+        4.0
+      ],
+      "EnvironmentSatisfaction": [
+        1.0,
+        4.0
+      ],
+      "RelationshipSatisfaction": [
+        1.0,
+        4.0
+      ],
+      "WorkLifeBalance": [
+        1.0,
+        4.0
+      ],
+      "DistanceFromHome": [
+        1.0,
+        29.0
+      ],
+      "Education": [
+        1.0,
+        5.0
+      ],
+      "JobLevel": [
+        1.0,
+        5.0
+      ],
+      "TotalWorkingYears": [
+        0.0,
+        40.0
+      ],
+      "YearsSinceLastPromotion": [
+        0.0,
+        15.0
+      ],
+      "YearsAtCompany": [
+        0.0,
+        40.0
+      ]
+    },
+    "overtime_values": {
+      "No": 1054,
+      "Yes": 416
+    },
+    "travel_values": {
+      "Travel_Rarely": 1043,
+      "Travel_Frequently": 277,
+      "Non-Travel": 150
+    },
+    "dtypes": {
+      "Age": "int64",
+      "Attrition": "int64",
+      "BusinessTravel": "str",
+      "DailyRate": "int64",
+      "Department": "str",
+      "DistanceFromHome": "int64",
+      "Education": "int64",
+      "EducationField": "str",
+      "EnvironmentSatisfaction": "int64",
+      "Gender": "str",
+      "HourlyRate": "int64",
+      "JobInvolvement": "int64",
+      "JobLevel": "int64",
+      "JobRole": "str",
+      "JobSatisfaction": "int64",
+      "MaritalStatus": "str",
+      "MonthlyIncome": "int64",
+      "MonthlyRate": "int64",
+      "NumCompaniesWorked": "int64",
+      "OverTime": "str",
+      "PercentSalaryHike": "int64",
+      "PerformanceRating": "int64",
+      "RelationshipSatisfaction": "int64",
+      "StockOptionLevel": "int64",
+      "TotalWorkingYears": "int64",
+      "TrainingTimesLastYear": "int64",
+      "WorkLifeBalance": "int64",
+      "YearsAtCompany": "int64",
+      "YearsInCurrentRole": "int64",
+      "YearsSinceLastPromotion": "int64",
+      "YearsWithCurrManager": "int64"
+    },
+    "imputed": {}
+  },
+  "overall": {
+    "n": 1470,
+    "attrition_left": 237,
+    "attrition_rate_pct": 16.122448979591837,
+    "engagement_mean": 2.7231292517006804,
+    "engagement_sd": 0.5040264057842866,
+    "burnout_mean": 37.59276190476191,
+    "burnout_sd": 17.63779603975521,
+    "burnout_min": 0.0,
+    "burnout_max": 97.86,
+    "job_satisfaction_mean": 2.7285714285714286,
+    "wlb_mean": 2.7612244897959184,
+    "overtime_yes_n": 416,
+    "burnout_risk_counts": {
+      "Low": 756,
+      "Medium": 588,
+      "High": 126
+    },
+    "priority_counts": {
+      "Low": 756,
+      "Medium": 457,
+      "High": 244,
+      "Critical": 13
+    }
+  },
+  "score_audit": {
+    "observed_distance_min": 1,
+    "observed_distance_max": 29,
+    "fixed_bounds_used": [
+      1.0,
+      29.0
+    ],
+    "max_abs_diff_original_code_vs_final": 0.0,
+    "max_abs_diff_paper_formula_vs_final": 0.0,
+    "n_scores_changed_vs_original_code": 0,
+    "weights": {
+      "overtime": 30.0,
+      "work_life_balance": 30.0,
+      "travel": 20.0,
+      "distance": 20.0
+    },
+    "all_scores_within_0_100": true,
+    "component_means": {
+      "OvertimePoints": 8.489795918367347,
+      "WLBPoints": 12.387755102040817,
+      "TravelPoints": 10.863945578231293,
+      "DistancePoints": 5.851797862001943
+    },
+    "component_sd": {
+      "OvertimePoints": 13.51819354794534,
+      "WLBPoints": 7.064758297141508,
+      "TravelPoints": 5.321699232385933,
+      "DistancePoints": 5.7906174540471955
+    }
+  },
+  "commute": {
+    "labels": [
+      "Short (1-5)",
+      "Medium (6-15)",
+      "Long (16+)"
+    ],
+    "every_employee_in_exactly_one_category": true,
+    "category_counts_sum": 1470,
+    "employees_at_distance_5": 65,
+    "employees_at_distance_6": 59,
+    "employees_at_distance_15": 26,
+    "employees_at_distance_16": 32,
+    "original_bins_counts": {
+      "Short (<5m)": 632,
+      "Medium (5-15m)": 509,
+      "Long (>15m)": 329
+    },
+    "original_bins_missing": 0,
+    "n_reclassified_vs_original": 0,
+    "groups": [
+      {
+        "Category": "Short (1-5)",
+        "Employees": 632,
+        "Distance_min": 1,
+        "Distance_max": 5,
+        "MeanBurnoutScore": 32.219604430379746,
+        "MeanEngagement": 2.721518987341772,
+        "Left": 87,
+        "AttritionRate_pct": 13.765822784810128
+      },
+      {
+        "Category": "Medium (6-15)",
+        "Employees": 509,
+        "Distance_min": 6,
+        "Distance_max": 15,
+        "MeanBurnoutScore": 37.50785854616896,
+        "MeanEngagement": 2.718074656188605,
+        "Left": 82,
+        "AttritionRate_pct": 16.110019646365423
+      },
+      {
+        "Category": "Long (16+)",
+        "Employees": 329,
+        "Distance_min": 16,
+        "Distance_max": 29,
+        "MeanBurnoutScore": 48.045805471124616,
+        "MeanEngagement": 2.734042553191489,
+        "Left": 68,
+        "AttritionRate_pct": 20.66869300911854
+      }
+    ],
+    "engagement_kruskal": {
+      "H": 0.2445257708030574,
+      "p": 0.8849157065014225,
+      "k": 3
+    },
+    "burnout_kruskal_MECHANICAL": {
+      "H": 193.92294281998193,
+      "p": 7.7654747056727e-43,
+      "k": 3
+    },
+    "attrition_chi2": {
+      "chi2": 7.623902253814899,
+      "dof": 2,
+      "p": 0.022105007179627368,
+      "cramers_v": 0.07201616529515897
+    },
+    "spearman_distance_vs_burnout_score": {
+      "rho": 0.3695839662362933,
+      "p": 8.539304728762315e-49
+    },
+    "spearman_distance_vs_engagement": {
+      "rho": -0.001078094451059741,
+      "p": 0.9670570398914659
+    },
+    "distance_points_share_of_score_variance_pct": 11.67471570629542
+  },
+  "tertiles": {
+    "method": "Thresholds at the 33.3rd and 66.7th percentiles of the score; score<=t1 lowest, t1<score<=t2 middle, >t2 highest; ties go to the lower group.",
+    "t1": 26.43,
+    "t2": 44.29,
+    "table": [
+      {
+        "ScoreGroup": "Lowest third",
+        "Employees": 513,
+        "Left": 38,
+        "AttritionRate_pct": 7.41,
+        "CI95_low_pct": 5.44,
+        "CI95_high_pct": 10.0,
+        "MeanScore": 19.90448343079922,
+        "ScoreMin": 0.0,
+        "ScoreMax": 26.43
+      },
+      {
+        "ScoreGroup": "Middle third",
+        "Employees": 471,
+        "Left": 55,
+        "AttritionRate_pct": 11.68,
+        "CI95_low_pct": 9.08,
+        "CI95_high_pct": 14.89,
+        "MeanScore": 34.820679405520174,
+        "ScoreMin": 27.14,
+        "ScoreMax": 44.29
+      },
+      {
+        "ScoreGroup": "Highest third",
+        "Employees": 486,
+        "Left": 144,
+        "AttritionRate_pct": 29.63,
+        "CI95_low_pct": 25.74,
+        "CI95_high_pct": 33.84,
+        "MeanScore": 58.950246913580244,
+        "ScoreMin": 45.0,
+        "ScoreMax": 97.86
+      }
+    ],
+    "chi_square_3x2": {
+      "chi2": 101.26204158181157,
+      "dof": 2,
+      "p": 1.0261882967046863e-22,
+      "cramers_v": 0.2624609353268805
+    },
+    "relative_risk_high_vs_low": {
+      "rr": 4.0,
+      "ci_low": 2.8607104908328047,
+      "ci_high": 5.593016158493588
+    },
+    "risk_difference_pp": 22.22222222222222,
+    "risk_difference_ci_pp": [
+      17.572763919171607,
+      26.871680525272833
+    ],
+    "auc_score_in_sample": 0.7011833509569811,
+    "auc_overtime_only_in_sample": 0.6507386532795384,
+    "paper_claim_lowest_pct": 7.4,
+    "paper_claim_highest_pct": 29.6,
+    "overtime_composition": {
+      "Lowest third": {
+        "overtime_yes": 0,
+        "n": 513,
+        "overtime_share_pct": 0.0
+      },
+      "Middle third": {
+        "overtime_yes": 24,
+        "n": 471,
+        "overtime_share_pct": 5.095541401273886
+      },
+      "Highest third": {
+        "overtime_yes": 392,
+        "n": 486,
+        "overtime_share_pct": 80.65843621399176
+      }
+    }
+  },
+  "attrition_by_overtime": [
+    {
+      "OverTime": "No",
+      "Employees": 1054,
+      "Left": 110,
+      "AttritionRate_pct": 10.44,
+      "CI95_low_pct": 8.73,
+      "CI95_high_pct": 12.43
+    },
+    {
+      "OverTime": "Yes",
+      "Employees": 416,
+      "Left": 127,
+      "AttritionRate_pct": 30.53,
+      "CI95_low_pct": 26.3,
+      "CI95_high_pct": 35.12
+    }
+  ],
+  "attrition_tertile_within_overtime": [
+    {
+      "OverTime": "No",
+      "ScoreGroup": "Lowest third",
+      "Employees": 513,
+      "Left": 38,
+      "AttritionRate_pct": 7.41,
+      "CI95_low_pct": 5.44,
+      "CI95_high_pct": 10.0
+    },
+    {
+      "OverTime": "No",
+      "ScoreGroup": "Middle third",
+      "Employees": 447,
+      "Left": 49,
+      "AttritionRate_pct": 10.96,
+      "CI95_low_pct": 8.39,
+      "CI95_high_pct": 14.2
+    },
+    {
+      "OverTime": "No",
+      "ScoreGroup": "Highest third",
+      "Employees": 94,
+      "Left": 23,
+      "AttritionRate_pct": 24.47,
+      "CI95_low_pct": 16.89,
+      "CI95_high_pct": 34.05
+    },
+    {
+      "OverTime": "Yes",
+      "ScoreGroup": "Middle third",
+      "Employees": 24,
+      "Left": 6,
+      "AttritionRate_pct": 25.0,
+      "CI95_low_pct": 12.0,
+      "CI95_high_pct": 44.9
+    },
+    {
+      "OverTime": "Yes",
+      "ScoreGroup": "Highest third",
+      "Employees": 392,
+      "Left": 121,
+      "AttritionRate_pct": 30.87,
+      "CI95_low_pct": 26.5,
+      "CI95_high_pct": 35.61
+    }
+  ],
+  "attrition_by_burnout_risk": [
+    {
+      "BurnoutRisk": "Low",
+      "Employees": 756,
+      "Left": 69,
+      "AttritionRate_pct": 9.13,
+      "CI95_low_pct": 7.28,
+      "CI95_high_pct": 11.39
+    },
+    {
+      "BurnoutRisk": "Medium",
+      "Employees": 588,
+      "Left": 126,
+      "AttritionRate_pct": 21.43,
+      "CI95_low_pct": 18.3,
+      "CI95_high_pct": 24.93
+    },
+    {
+      "BurnoutRisk": "High",
+      "Employees": 126,
+      "Left": 42,
+      "AttritionRate_pct": 33.33,
+      "CI95_low_pct": 25.7,
+      "CI95_high_pct": 41.95
+    }
+  ],
+  "overtime_engagement": {
+    "welch": {
+      "n_a": 416,
+      "n_b": 1054,
+      "mean_a": 2.7842548076923075,
+      "mean_b": 2.699003795066414,
+      "sd_a": 0.4974619171484135,
+      "sd_b": 0.5047932206528856,
+      "diff": 0.08525101262589363,
+      "ci_low": 0.028470516110172456,
+      "ci_high": 0.1420315091416148,
+      "t": 2.9473453277842334,
+      "df": 770.6933685745928,
+      "p": 0.003301899265069583,
+      "cohens_d": 0.1695756271459224
+    },
+    "mann_whitney_p": 0.001311120170599619,
+    "direction": "overtime higher",
+    "engagement_skewness_overtime": -0.371587015049742,
+    "engagement_skewness_no_overtime": -0.13397746022610443,
+    "shapiro_p_overtime": 9.742507384171085e-09,
+    "note": "EngagementIndex is a bounded mean of four ordinal items; n is large so the Welch t-test is reasonable; Mann-Whitney is reported as a robustness check."
+  },
+  "department": {
+    "table": [
+      {
+        "Department": "Human Resources",
+        "Employees": 63,
+        "MeanEngagement": 2.7301587301587302,
+        "MeanBurnoutScore": 35.18063492063492,
+        "MeanWLB": 2.9206349206349205,
+        "Left": 12,
+        "AttritionRate_pct": 19.047619047619047
+      },
+      {
+        "Department": "Research & Development",
+        "Employees": 961,
+        "MeanEngagement": 2.730228928199792,
+        "MeanBurnoutScore": 37.90861602497399,
+        "MeanWLB": 2.72528616024974,
+        "Left": 133,
+        "AttritionRate_pct": 13.839750260145681
+      },
+      {
+        "Department": "Sales",
+        "Employees": 446,
+        "MeanEngagement": 2.7068385650224216,
+        "MeanBurnoutScore": 37.25291479820628,
+        "MeanWLB": 2.8161434977578477,
+        "Left": 92,
+        "AttritionRate_pct": 20.62780269058296
+      }
+    ],
+    "engagement_kruskal": {
+      "H": 0.6883793304982803,
+      "p": 0.7087944816180605,
+      "k": 3
+    },
+    "burnout_kruskal": {
+      "H": 1.5435965640617466,
+      "p": 0.4621811884319229,
+      "k": 3
+    },
+    "attrition_chi2": {
+      "chi2": 10.79600732241067,
+      "dof": 2,
+      "p": 0.004525606574479633,
+      "cramers_v": 0.0856984402909795
+    }
+  },
+  "career_stage": {
+    "table": [
+      {
+        "CareerStage": "Early (0-5 yrs)",
+        "Employees": 316,
+        "MeanEngagement": 2.7492088607594938,
+        "MeanBurnoutScore": 37.234841772151896,
+        "MeanWLB": 2.7563291139240507,
+        "Left": 91,
+        "AttritionRate_pct": 28.79746835443038
+      },
+      {
+        "CareerStage": "Mid (6-15 yrs)",
+        "Employees": 798,
+        "MeanEngagement": 2.713972431077694,
+        "MeanBurnoutScore": 37.23546365914787,
+        "MeanWLB": 2.7531328320802007,
+        "Left": 115,
+        "AttritionRate_pct": 14.411027568922306
+      },
+      {
+        "CareerStage": "Late (16+ yrs)",
+        "Employees": 356,
+        "MeanEngagement": 2.720505617977528,
+        "MeanBurnoutScore": 38.71137640449438,
+        "MeanWLB": 2.783707865168539,
+        "Left": 31,
+        "AttritionRate_pct": 8.707865168539326
+      }
+    ],
+    "engagement_kruskal": {
+      "H": 1.2352393987036125,
+      "p": 0.5392264322492301,
+      "k": 3
+    },
+    "burnout_kruskal": {
+      "H": 1.2364295233841158,
+      "p": 0.5389056543574171,
+      "k": 3
+    },
+    "attrition_chi2": {
+      "chi2": 53.74214320676279,
+      "dof": 2,
+      "p": 2.138168267102128e-12,
+      "cramers_v": 0.19120481451322274
+    }
+  },
+  "promotion": {
+    "spearman_rho": 0.024846824016567598,
+    "spearman_p": 0.341108039199838,
+    "ols": {
+      "n": 1470,
+      "slope": 0.0012892418377673093,
+      "intercept": 2.7203087062923403,
+      "slope_ci_low": -0.006718282873323969,
+      "slope_ci_high": 0.009296766548858587,
+      "r": 0.008242607703634676,
+      "r2": 6.79405817560177e-05,
+      "p": 0.7521824946112364
+    },
+    "threshold_test_le3_vs_ge4": {
+      "n_a": 321,
+      "n_b": 1149,
+      "mean_a": 2.7242990654205608,
+      "mean_b": 2.7228024369016537,
+      "sd_a": 0.4726106592961841,
+      "sd_b": 0.5126556669793502,
+      "diff": 0.0014966285189070838,
+      "ci_low": -0.05823106092617649,
+      "ci_high": 0.06122431796399066,
+      "t": 0.04922048250451842,
+      "df": 548.4416374069177,
+      "p": 0.9607615076659473,
+      "cohens_d": 0.0029683368523876147
+    },
+    "threshold_note": "YearsSinceLastPromotion is an integer, so the paper's 3.5-year cliff is tested as >=4 years vs <=3 years.",
+    "mean_engagement_by_year": [
+      {
+        "YearsSinceLastPromotion": 0,
+        "Employees": 581,
+        "MeanEngagement": 2.6996557659208262
+      },
+      {
+        "YearsSinceLastPromotion": 1,
+        "Employees": 357,
+        "MeanEngagement": 2.7219887955182074
+      },
+      {
+        "YearsSinceLastPromotion": 2,
+        "Employees": 159,
+        "MeanEngagement": 2.790880503144654
+      },
+      {
+        "YearsSinceLastPromotion": 3,
+        "Employees": 52,
+        "MeanEngagement": 2.7788461538461537
+      },
+      {
+        "YearsSinceLastPromotion": 4,
+        "Employees": 61,
+        "MeanEngagement": 2.778688524590164
+      },
+      {
+        "YearsSinceLastPromotion": 5,
+        "Employees": 45,
+        "MeanEngagement": 2.7888888888888888
+      },
+      {
+        "YearsSinceLastPromotion": 6,
+        "Employees": 32,
+        "MeanEngagement": 2.6171875
+      },
+      {
+        "YearsSinceLastPromotion": 7,
+        "Employees": 76,
+        "MeanEngagement": 2.6973684210526314
+      },
+      {
+        "YearsSinceLastPromotion": 8,
+        "Employees": 18,
+        "MeanEngagement": 2.8055555555555554
+      },
+      {
+        "YearsSinceLastPromotion": 9,
+        "Employees": 17,
+        "MeanEngagement": 2.661764705882353
+      },
+      {
+        "YearsSinceLastPromotion": 10,
+        "Employees": 6,
+        "MeanEngagement": 2.5833333333333335
+      },
+      {
+        "YearsSinceLastPromotion": 11,
+        "Employees": 24,
+        "MeanEngagement": 2.6354166666666665
+      },
+      {
+        "YearsSinceLastPromotion": 12,
+        "Employees": 10,
+        "MeanEngagement": 2.725
+      },
+      {
+        "YearsSinceLastPromotion": 13,
+        "Employees": 10,
+        "MeanEngagement": 2.925
+      },
+      {
+        "YearsSinceLastPromotion": 14,
+        "Employees": 9,
+        "MeanEngagement": 2.6666666666666665
+      },
+      {
+        "YearsSinceLastPromotion": 15,
+        "Employees": 13,
+        "MeanEngagement": 2.75
+      }
+    ],
+    "mean_years_since_promotion": 2.1877551020408164
+  },
+  "tenure": {
+    "spearman_rho": 0.011095748866068223,
+    "spearman_p": 0.6707866456903009,
+    "ols": {
+      "n": 1470,
+      "slope": 0.00012826837289449971,
+      "intercept": 2.7222303260016605,
+      "slope_ci_low": -0.004083668196014613,
+      "slope_ci_high": 0.004340204941803613,
+      "r": 0.0015591234978517305,
+      "r2": 2.430866081553415e-06,
+      "p": 0.9523731606472691
+    }
+  },
+  "other_associations": {
+    "spearman_wlb_vs_attrition": {
+      "rho": -0.05195135724817522,
+      "p": 0.04642643084922044
+    }
+  },
+  "holm_family": [
+    {
+      "Test": "Overtime vs engagement (Welch t)",
+      "p_raw": 0.003301899265069583,
+      "p_holm": 0.029717093385626246,
+      "Significant_at_0.05_after_Holm": true
+    },
+    {
+      "Test": "Promotion wait vs engagement (Spearman)",
+      "p_raw": 0.341108039199838,
+      "p_holm": 1.0,
+      "Significant_at_0.05_after_Holm": false
+    },
+    {
+      "Test": "Promotion >=4 vs <=3 yrs, engagement (Welch t)",
+      "p_raw": 0.9607615076659473,
+      "p_holm": 1.0,
+      "Significant_at_0.05_after_Holm": false
+    },
+    {
+      "Test": "Tenure vs engagement (Spearman)",
+      "p_raw": 0.6707866456903009,
+      "p_holm": 1.0,
+      "Significant_at_0.05_after_Holm": false
+    },
+    {
+      "Test": "Engagement across departments (Kruskal-Wallis)",
+      "p_raw": 0.7087944816180605,
+      "p_holm": 1.0,
+      "Significant_at_0.05_after_Holm": false
+    },
+    {
+      "Test": "Engagement across career stages (Kruskal-Wallis)",
+      "p_raw": 0.5392264322492301,
+      "p_holm": 1.0,
+      "Significant_at_0.05_after_Holm": false
+    },
+    {
+      "Test": "Engagement across commute groups (Kruskal-Wallis)",
+      "p_raw": 0.8849157065014225,
+      "p_holm": 1.0,
+      "Significant_at_0.05_after_Holm": false
+    },
+    {
+      "Test": "Attrition across score thirds (chi-square)",
+      "p_raw": 1.0261882967046863e-22,
+      "p_holm": 1.128807126375155e-21,
+      "Significant_at_0.05_after_Holm": true
+    },
+    {
+      "Test": "Attrition across departments (chi-square)",
+      "p_raw": 0.004525606574479633,
+      "p_holm": 0.03620485259583706,
+      "Significant_at_0.05_after_Holm": true
+    },
+    {
+      "Test": "Attrition across career stages (chi-square)",
+      "p_raw": 2.138168267102128e-12,
+      "p_holm": 2.138168267102128e-11,
+      "Significant_at_0.05_after_Holm": true
+    },
+    {
+      "Test": "Attrition across commute groups (chi-square)",
+      "p_raw": 0.022105007179627368,
+      "p_holm": 0.15473505025739157,
+      "Significant_at_0.05_after_Holm": false
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim": "1,470 records",
+      "computed": 1470,
+      "supported": true
+    },
+    {
+      "claim": "31 columns",
+      "computed": 31,
+      "supported": true
+    },
+    {
+      "claim": "Zero missing values",
+      "computed": 0,
+      "supported": true
+    },
+    {
+      "claim": "Attrition near 16.12%",
+      "computed": 16.12,
+      "supported": true
+    },
+    {
+      "claim": "Lowest tertile attrition 7.4%",
+      "computed": 7.41,
+      "supported": true
+    },
+    {
+      "claim": "Highest tertile attrition 29.6%",
+      "computed": 29.63,
+      "supported": true
+    },
+    {
+      "claim": "Overtime associated with slightly higher engagement",
+      "computed": 0.0853,
+      "supported": true
+    },
+    {
+      "claim": "No relationship between promotion wait and engagement",
+      "computed": 0.0248,
+      "supported": true
+    }
+  ]
+}

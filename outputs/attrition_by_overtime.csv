@@ -1,0 +1,3 @@
+OverTime,Employees,Left,AttritionRate_pct,CI95_low_pct,CI95_high_pct
+No,1054,110,10.44,8.73,12.43
+Yes,416,127,30.53,26.3,35.12

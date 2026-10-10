@@ -1,0 +1,6 @@
+OverTime,ScoreGroup,Employees,Left,AttritionRate_pct,CI95_low_pct,CI95_high_pct
+No,Lowest third,513,38,7.41,5.44,10.0
+No,Middle third,447,49,10.96,8.39,14.2
+No,Highest third,94,23,24.47,16.89,34.05
+Yes,Middle third,24,6,25.0,12.0,44.9
+Yes,Highest third,392,121,30.87,26.5,35.61

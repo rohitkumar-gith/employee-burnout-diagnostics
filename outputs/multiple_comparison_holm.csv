@@ -1,0 +1,12 @@
+Test,p_raw,p_holm,Significant_at_0.05_after_Holm
+Overtime vs engagement (Welch t),0.003301899265069583,0.029717093385626246,True
+Promotion wait vs engagement (Spearman),0.341108039199838,1.0,False
+"Promotion >=4 vs <=3 yrs, engagement (Welch t)",0.9607615076659473,1.0,False
+Tenure vs engagement (Spearman),0.6707866456903009,1.0,False
+Engagement across departments (Kruskal-Wallis),0.7087944816180605,1.0,False
+Engagement across career stages (Kruskal-Wallis),0.5392264322492301,1.0,False
+Engagement across commute groups (Kruskal-Wallis),0.8849157065014225,1.0,False
+Attrition across score thirds (chi-square),1.0261882967046863e-22,1.128807126375155e-21,True
+Attrition across departments (chi-square),0.004525606574479633,0.03620485259583706,True
+Attrition across career stages (chi-square),2.138168267102128e-12,2.138168267102128e-11,True
+Attrition across commute groups (chi-square),0.022105007179627368,0.15473505025739157,False
