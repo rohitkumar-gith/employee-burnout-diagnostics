@@ -1,3 +1,15 @@
 -r requirements.txt
 pytest>=8.0
-python-docx>=1.1   # build_paper.py
+python-docx>=1.1
+# Runtime dependencies for app.py, hr_analytics.py and analysis.py
+# Versions are minimums. Only pandas, numpy, scipy and matplotlib were installed
+# and exercised in the verification environment; streamlit, plotly and
+# statsmodels could not be installed there, so their minimums are not tested.
+streamlit>=1.50.0      # app uses st.plotly_chart/st.dataframe(width="stretch")
+pandas>=2.2
+numpy>=1.26
+scipy>=1.11            # Welch t-test confidence_interval() needs SciPy 1.11+
+plotly>=5.19
+statsmodels>=0.14      # OLS trendlines in scatter plots (optional: plots fall back without it)
+matplotlib>=3.7        # required by pandas Styler.background_gradient (was missing before)
+   # build_paper.py
